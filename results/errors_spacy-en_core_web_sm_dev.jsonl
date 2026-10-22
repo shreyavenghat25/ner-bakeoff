@@ -1,0 +1,4 @@
+{"id": "d01", "text": "Priya Nair visited the Gardens by the Bay on Saturday to open the Lantern Festival.", "false_positives": [["the bay on", "LOCATION"], ["the lantern festival", "EVENT"]], "false_negatives": [["gardens by the bay", "LOCATION"], ["lantern festival", "EVENT"]]}
+{"id": "d04", "text": "Heavy rain delayed the start of the Asia Cup in Colombo.", "false_positives": [["the asia cup", "EVENT"]], "false_negatives": [["asia cup", "EVENT"]]}
+{"id": "d05", "text": "The new film, directed by Wen Li, will premiere at the Busan International Film Festival.", "false_positives": [["the busan international film festival", "LOCATION"]], "false_negatives": [["busan international film festival", "EVENT"]]}
+{"id": "d09", "text": "The Mekong flooded several villages near Vientiane last week.", "false_positives": [["mekong", "ORG"]], "false_negatives": [["mekong", "LOCATION"]]}

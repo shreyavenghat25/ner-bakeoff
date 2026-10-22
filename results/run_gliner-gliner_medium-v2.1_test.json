@@ -1,0 +1,96 @@
+{
+  "model_key": "gliner",
+  "name": "gliner-gliner_medium-v2.1",
+  "split": "test",
+  "timestamp": "2026-10-22T11:27:00",
+  "details": {
+    "library": "gliner 0.2.29, torch 2.14.1",
+    "model": "urchade/gliner_medium-v2.1",
+    "params_millions": 195,
+    "precision": "fp32 (CPU)",
+    "threshold": 0.5,
+    "label_prompts": {
+      "person": "PERSON",
+      "organization": "ORG",
+      "location": "LOCATION",
+      "named event": "EVENT"
+    }
+  },
+  "hardware": {
+    "os": "Darwin 23.4.0",
+    "machine": "arm64",
+    "cpu": "Apple M2",
+    "cpu_logical_cores": 8,
+    "ram_gb": 8.0,
+    "python": "3.11.17",
+    "gpu": null
+  },
+  "load_s": 11.029735291998804,
+  "warmup_snippets": 3,
+  "latency": {
+    "n": 50,
+    "median_s": 0.05999072949998663,
+    "p95_s": 0.06381676699802483,
+    "mean_s": 0.06032664342004864,
+    "total_s": 3.016332171002432
+  },
+  "peak_rss_mb": 1517.9,
+  "peak_memory_mb": 1517.9,
+  "ollama_loaded_model": null,
+  "memory_scope": "peak RSS of this process",
+  "postprocess": {
+    "strip_leading_the": true,
+    "drops": {
+      "bad_label": 0,
+      "not_in_text": 0,
+      "empty": 0,
+      "duplicate": 1,
+      "nested": 0
+    }
+  },
+  "llm_parse_failures": null,
+  "local_score": {
+    "overall": {
+      "precision": 0.7401574803149606,
+      "recall": 0.8703703703703703,
+      "f1": 0.8,
+      "tp": 94,
+      "fp": 33,
+      "fn": 14
+    },
+    "per_label": {
+      "PERSON": {
+        "precision": 0.7096774193548387,
+        "recall": 0.8461538461538461,
+        "f1": 0.7719298245614036,
+        "tp": 22,
+        "fp": 9,
+        "fn": 4
+      },
+      "ORG": {
+        "precision": 0.6764705882352942,
+        "recall": 0.92,
+        "f1": 0.7796610169491526,
+        "tp": 23,
+        "fp": 11,
+        "fn": 2
+      },
+      "LOCATION": {
+        "precision": 0.9111111111111111,
+        "recall": 0.9761904761904762,
+        "f1": 0.9425287356321839,
+        "tp": 41,
+        "fp": 4,
+        "fn": 1
+      },
+      "EVENT": {
+        "precision": 0.47058823529411764,
+        "recall": 0.5333333333333333,
+        "f1": 0.5,
+        "tp": 8,
+        "fp": 9,
+        "fn": 7
+      }
+    }
+  }
+}

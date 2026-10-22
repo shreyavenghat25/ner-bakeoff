@@ -1,0 +1,50 @@
+{"id": "t01", "entities": [{"text": "Daniel Koh", "label": "PERSON"}, {"text": "Tuas", "label": "LOCATION"}]}
+{"id": "t02", "entities": [{"text": "Jordan Ellis", "label": "PERSON"}, {"text": "Amman", "label": "LOCATION"}]}
+{"id": "t03", "entities": [{"text": "Leila Haddad", "label": "PERSON"}]}
+{"id": "t04", "entities": []}
+{"id": "t05", "entities": [{"text": "Victoria Lim", "label": "PERSON"}, {"text": "Victoria Harbour", "label": "LOCATION"}, {"text": "Hong Kong Sevens", "label": "EVENT"}]}
+{"id": "t06", "entities": [{"text": "rohan mehta", "label": "PERSON"}, {"text": "mumbai", "label": "LOCATION"}]}
+{"id": "t07", "entities": [{"text": "ASEAN", "label": "ORG"}, {"text": "Jakarta", "label": "LOCATION"}, {"text": "ASEAN Summit", "label": "EVENT"}]}
+{"id": "t08", "entities": [{"text": "Singapore", "label": "LOCATION"}, {"text": "Ministry of Transport", "label": "ORG"}, {"text": "Land Transport Authority", "label": "ORG"}]}
+{"id": "t09", "entities": [{"text": "Ng Kah Hock", "label": "PERSON"}, {"text": "Penang", "label": "LOCATION"}]}
+{"id": "t10", "entities": [{"text": "Mary-Ann Fernandez", "label": "PERSON"}, {"text": "Kochi Muziris Biennale", "label": "EVENT"}]}
+{"id": "t11", "entities": []}
+{"id": "t12", "entities": [{"text": "Typhoon Meilan", "label": "EVENT"}, {"text": "Da Nang", "label": "LOCATION"}]}
+{"id": "t13", "entities": [{"text": "Esplanade", "label": "LOCATION"}, {"text": "National Day Parade", "label": "EVENT"}]}
+{"id": "t14", "entities": [{"text": "Harbour Daily", "label": "ORG"}, {"text": "Greenfield Bank", "label": "ORG"}, {"text": "Kolkata", "label": "LOCATION"}]}
+{"id": "t15", "entities": [{"text": "Sofia Petrova", "label": "PERSON"}, {"text": "Dinamo Riga", "label": "ORG"}, {"text": "Tallinn United", "label": "ORG"}, {"text": "Baltic Cup", "label": "EVENT"}]}
+{"id": "t16", "entities": [{"text": "Diwali", "label": "EVENT"}, {"text": "Little India", "label": "LOCATION"}]}
+{"id": "t17", "entities": [{"text": "Mekong River Commission", "label": "ORG"}, {"text": "Phnom Penh", "label": "LOCATION"}]}
+{"id": "t18", "entities": [{"text": "Anil Rao", "label": "PERSON"}, {"text": "Rajiv", "label": "PERSON"}, {"text": "Lake Pichola", "label": "LOCATION"}, {"text": "Udaipur", "label": "LOCATION"}]}
+{"id": "t19", "entities": [{"text": "Amazon", "label": "LOCATION"}]}
+{"id": "t20", "entities": [{"text": "Institute of Policy Studies", "label": "ORG"}]}
+{"id": "t21", "entities": [{"text": "Nurul Huda", "label": "PERSON"}, {"text": "Kuala Lumpur", "label": "LOCATION"}, {"text": "Kota Kinabalu", "label": "LOCATION"}, {"text": "Hari Raya", "label": "EVENT"}]}
+{"id": "t22", "entities": [{"text": "Bluewave Telecom", "label": "ORG"}, {"text": "Johor", "label": "LOCATION"}]}
+{"id": "t23", "entities": [{"text": "Formula 1 Singapore Grand Prix", "label": "EVENT"}]}
+{"id": "t24", "entities": [{"text": "Thomas Becker", "label": "PERSON"}, {"text": "Hamburg", "label": "LOCATION"}, {"text": "University of Auckland", "label": "ORG"}]}
+{"id": "t25", "entities": [{"text": "Causeway", "label": "LOCATION"}, {"text": "Johor Bahru", "label": "LOCATION"}]}
+{"id": "t26", "entities": [{"text": "Orchid Pharma", "label": "ORG"}, {"text": "Hyderabad", "label": "LOCATION"}]}
+{"id": "t27", "entities": [{"text": "Mei Ling Zhou", "label": "PERSON"}, {"text": "Singapore Food Festival", "label": "EVENT"}, {"text": "Arturo Gil", "label": "PERSON"}]}
+{"id": "t28", "entities": [{"text": "Straits Orchestra", "label": "ORG"}, {"text": "Victoria Concert Hall", "label": "LOCATION"}]}
+{"id": "t29", "entities": []}
+{"id": "t30", "entities": [{"text": "Ravi Chandran", "label": "PERSON"}, {"text": "Lotus Realty", "label": "ORG"}, {"text": "Whitefield", "label": "LOCATION"}]}
+{"id": "t31", "entities": [{"text": "Jakarta", "label": "LOCATION"}, {"text": "Indonesian Football Association", "label": "ORG"}, {"text": "match", "label": "EVENT"}]}
+{"id": "t32", "entities": [{"text": "Elena Rossi", "label": "PERSON"}, {"text": "Milan", "label": "LOCATION"}, {"text": "Perth", "label": "LOCATION"}, {"text": "Australian Open", "label": "EVENT"}]}
+{"id": "t33", "entities": [{"text": "Mount Kinabalu", "label": "LOCATION"}, {"text": "Sandakan", "label": "LOCATION"}]}
+{"id": "t34", "entities": [{"text": "Oakridge Primary School", "label": "ORG"}, {"text": "district science fair", "label": "EVENT"}]}
+{"id": "t35", "entities": [{"text": "Dewi Lestari", "label": "PERSON"}, {"text": "Yogyakarta", "label": "LOCATION"}]}
+{"id": "t36", "entities": [{"text": "Evergreen Insurance", "label": "ORG"}, {"text": "Northshore Trust", "label": "ORG"}, {"text": "Singapore", "label": "LOCATION"}]}
+{"id": "t37", "entities": [{"text": "Sundaram Iyer", "label": "PERSON"}, {"text": "Madras Cricket Club", "label": "ORG"}]}
+{"id": "t38", "entities": [{"text": "Great Barrier Reef", "label": "LOCATION"}]}
+{"id": "t39", "entities": [{"text": "Hana Sato", "label": "PERSON"}, {"text": "Jin-woo Park", "label": "PERSON"}, {"text": "Seoul Design Week", "label": "EVENT"}]}
+{"id": "t40", "entities": []}
+{"id": "t41", "entities": [{"text": "Michael Soh", "label": "PERSON"}, {"text": "Sentosa Sharks", "label": "ORG"}]}
+{"id": "t42", "entities": [{"text": "Bukit Timah", "label": "LOCATION"}]}
+{"id": "t43", "entities": [{"text": "Silverline Foods", "label": "ORG"}, {"text": "Dhaka", "label": "LOCATION"}, {"text": "Colombo", "label": "LOCATION"}]}
+{"id": "t44", "entities": [{"text": "Isabelle Moreau", "label": "PERSON"}]}
+{"id": "t45", "entities": [{"text": "Changi", "label": "LOCATION"}]}
+{"id": "t46", "entities": [{"text": "Seoul Olympics", "label": "EVENT"}]}
+{"id": "t47", "entities": [{"text": "Fatima Al-Sayed", "label": "PERSON"}, {"text": "Delta Labs", "label": "ORG"}, {"text": "Berlin AI Summit", "label": "EVENT"}]}
+{"id": "t48", "entities": [{"text": "Batam", "label": "LOCATION"}, {"text": "HarbourFront", "label": "LOCATION"}]}
+{"id": "t49", "entities": [{"text": "Brother Anselm", "label": "PERSON"}, {"text": "St. Andrew's Mission", "label": "ORG"}, {"text": "Penang", "label": "LOCATION"}]}
+{"id": "t50", "entities": [{"text": "Grace Tay", "label": "PERSON"}, {"text": "Lakeside Residents' Association", "label": "ORG"}]}

@@ -1,0 +1,9 @@
+{"id": "t03", "text": "Phoenix Capital hired Leila Haddad as chief financial officer.", "false_positives": [], "false_negatives": [["phoenix capital", "ORG"]]}
+{"id": "t04", "text": "Temperatures in Phoenix reached 45 degrees on Tuesday.", "false_positives": [], "false_negatives": [["phoenix", "LOCATION"]]}
+{"id": "t23", "text": "The Formula 1 Singapore Grand Prix returns to Marina Bay this September.", "false_positives": [], "false_negatives": [["marina bay", "LOCATION"]]}
+{"id": "t31", "text": "Flooding in Jakarta forced the Indonesian Football Association to postpone a match.", "false_positives": [["match", "EVENT"]], "false_negatives": []}
+{"id": "t34", "text": "Oakridge Primary School will host the district science fair on 12 March.", "false_positives": [["district science fair", "EVENT"]], "false_negatives": []}
+{"id": "t38", "text": "The Great Barrier Reef suffered another bleaching event, scientists in Cairns said.", "false_positives": [], "false_negatives": [["cairns", "LOCATION"]]}
+{"id": "t43", "text": "Krishnan said the company, Silverline Foods, had expanded to Dhaka and Colombo.", "false_positives": [], "false_negatives": [["krishnan", "PERSON"]]}
+{"id": "t44", "text": "The Cannes Film Festival jury, led by Isabelle Moreau, praised the debut.", "false_positives": [], "false_negatives": [["cannes film festival", "EVENT"]]}
+{"id": "t49", "text": "Brother Anselm of St. Andrew's Mission thanked volunteers from across Penang.", "false_positives": [["brother anselm", "PERSON"]], "false_negatives": [["anselm", "PERSON"]]}

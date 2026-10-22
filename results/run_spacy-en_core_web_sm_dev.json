@@ -1,0 +1,97 @@
+{
+  "model_key": "spacy",
+  "name": "spacy-en_core_web_sm",
+  "split": "dev",
+  "timestamp": "2026-10-22T11:24:26",
+  "details": {
+    "library": "spacy 3.8.16",
+    "model": "en_core_web_sm",
+    "model_version": "3.8.0",
+    "precision": "fp32 (CPU)",
+    "label_map": {
+      "PERSON": "PERSON",
+      "ORG": "ORG",
+      "GPE": "LOCATION",
+      "LOC": "LOCATION",
+      "FAC": "LOCATION",
+      "EVENT": "EVENT"
+    }
+  },
+  "hardware": {
+    "os": "Darwin 23.4.0",
+    "machine": "arm64",
+    "cpu": "Apple M2",
+    "cpu_logical_cores": 8,
+    "ram_gb": 8.0,
+    "python": "3.11.17",
+    "gpu": null
+  },
+  "load_s": 0.8642084580023948,
+  "warmup_snippets": 3,
+  "latency": {
+    "n": 10,
+    "median_s": 0.0035336460005055415,
+    "p95_s": 0.004122596199522377,
+    "mean_s": 0.003497575200526626,
+    "total_s": 0.03497575200526626
+  },
+  "peak_rss_mb": 303.3,
+  "peak_memory_mb": 303.3,
+  "ollama_loaded_model": null,
+  "memory_scope": "peak RSS of this process",
+  "postprocess": {
+    "strip_leading_the": false,
+    "drops": {
+      "bad_label": 0,
+      "not_in_text": 0,
+      "empty": 0,
+      "duplicate": 0,
+      "nested": 0
+    }
+  },
+  "llm_parse_failures": null,
+  "local_score": {
+    "overall": {
+      "precision": 0.7916666666666666,
+      "recall": 0.7916666666666666,
+      "f1": 0.7916666666666666,
+      "tp": 19,
+      "fp": 5,
+      "fn": 5
+    },
+    "per_label": {
+      "PERSON": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "fp": 0,
+        "fn": 0
+      },
+      "ORG": {
+        "precision": 0.8333333333333334,
+        "recall": 1.0,
+        "f1": 0.9090909090909091,
+        "tp": 5,
+        "fp": 1,
+        "fn": 0
+      },
+      "LOCATION": {
+        "precision": 0.7777777777777778,
+        "recall": 0.7777777777777778,
+        "f1": 0.7777777777777778,
+        "tp": 7,
+        "fp": 2,
+        "fn": 2
+      },
+      "EVENT": {
+        "precision": 0.3333333333333333,
+        "recall": 0.25,
+        "f1": 0.28571428571428575,
+        "tp": 1,
+        "fp": 2,
+        "fn": 3
+      }
+    }
+  }
+}

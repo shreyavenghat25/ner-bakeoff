@@ -1,0 +1,2 @@
+{"id": "d03", "text": "Dr. Marcus Teo told reporters that the clinic would stay open during Chinese New Year.", "false_positives": [], "false_negatives": [["chinese new year", "EVENT"]]}
+{"id": "d09", "text": "The Mekong flooded several villages near Vientiane last week.", "false_positives": [], "false_negatives": [["mekong", "LOCATION"]]}

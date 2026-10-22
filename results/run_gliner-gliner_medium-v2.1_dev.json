@@ -1,0 +1,96 @@
+{
+  "model_key": "gliner",
+  "name": "gliner-gliner_medium-v2.1",
+  "split": "dev",
+  "timestamp": "2026-10-22T11:25:16",
+  "details": {
+    "library": "gliner 0.2.29, torch 2.14.1",
+    "model": "urchade/gliner_medium-v2.1",
+    "params_millions": 195,
+    "precision": "fp32 (CPU)",
+    "threshold": 0.6,
+    "label_prompts": {
+      "person": "PERSON",
+      "organization": "ORG",
+      "location": "LOCATION",
+      "named event": "EVENT"
+    }
+  },
+  "hardware": {
+    "os": "Darwin 23.4.0",
+    "machine": "arm64",
+    "cpu": "Apple M2",
+    "cpu_logical_cores": 8,
+    "ram_gb": 8.0,
+    "python": "3.11.17",
+    "gpu": null
+  },
+  "load_s": 11.081106707999425,
+  "warmup_snippets": 3,
+  "latency": {
+    "n": 10,
+    "median_s": 0.0670476459999918,
+    "p95_s": 0.08535324810000021,
+    "mean_s": 0.0692331499998545,
+    "total_s": 0.692331499998545
+  },
+  "peak_rss_mb": 1547.4,
+  "peak_memory_mb": 1547.4,
+  "ollama_loaded_model": null,
+  "memory_scope": "peak RSS of this process",
+  "postprocess": {
+    "strip_leading_the": true,
+    "drops": {
+      "bad_label": 0,
+      "not_in_text": 0,
+      "empty": 0,
+      "duplicate": 0,
+      "nested": 0
+    }
+  },
+  "llm_parse_failures": null,
+  "local_score": {
+    "overall": {
+      "precision": 0.8214285714285714,
+      "recall": 0.9583333333333334,
+      "f1": 0.8846153846153847,
+      "tp": 23,
+      "fp": 5,
+      "fn": 1
+    },
+    "per_label": {
+      "PERSON": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "tp": 6,
+        "fp": 2,
+        "fn": 0
+      },
+      "ORG": {
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1": 0.8000000000000002,
+        "tp": 4,
+        "fp": 1,
+        "fn": 1
+      },
+      "LOCATION": {
+        "precision": 0.9,
+        "recall": 1.0,
+        "f1": 0.9473684210526316,
+        "tp": 9,
+        "fp": 1,
+        "fn": 0
+      },
+      "EVENT": {
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.888888888888889,
+        "tp": 4,
+        "fp": 1,
+        "fn": 0
+      }
+    }
+  }
+}

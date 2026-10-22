@@ -1,0 +1,3 @@
+{"id": "d03", "text": "Dr. Marcus Teo told reporters that the clinic would stay open during Chinese New Year.", "false_positives": [["clinic", "ORG"]], "false_negatives": []}
+{"id": "d06", "text": "She said the proposal was still under review.", "false_positives": [["she", "PERSON"]], "false_negatives": []}
+{"id": "d07", "text": "Students from Raffles Institution and Hwa Chong Institution will compete at the finals.", "false_positives": [["finals", "EVENT"], ["raffles institution", "LOCATION"], ["students", "PERSON"]], "false_negatives": [["raffles institution", "ORG"]]}

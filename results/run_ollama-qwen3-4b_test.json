@@ -1,0 +1,99 @@
+{
+  "model_key": "ollama",
+  "name": "ollama-qwen3-4b",
+  "split": "test",
+  "timestamp": "2026-10-22T11:28:51",
+  "details": {
+    "runtime": "ollama",
+    "model": "qwen3:4b",
+    "parameter_size": "4.0B",
+    "quantization": "Q4_K_M",
+    "family": "qwen3",
+    "format": "gguf",
+    "prompt_file": "ner_prompt.txt",
+    "structured_output": true,
+    "temperature": 0,
+    "seed": 42
+  },
+  "hardware": {
+    "os": "Darwin 23.4.0",
+    "machine": "arm64",
+    "cpu": "Apple M2",
+    "cpu_logical_cores": 8,
+    "ram_gb": 8.0,
+    "python": "3.11.17",
+    "gpu": null
+  },
+  "load_s": 0.02705229099956341,
+  "warmup_snippets": 3,
+  "latency": {
+    "n": 50,
+    "median_s": 1.9660478124988003,
+    "p95_s": 3.474877203651158,
+    "mean_s": 2.0602329583601384,
+    "total_s": 103.01164791800693
+  },
+  "peak_rss_mb": 74.7,
+  "peak_memory_mb": 3047.9,
+  "ollama_loaded_model": {
+    "size_mb": 3028.2,
+    "size_vram_mb": 3028.2,
+    "context_length": 4096
+  },
+  "memory_scope": "max(RSS of this process + ollama processes, this process RSS + model size from ollama /api/ps)",
+  "postprocess": {
+    "strip_leading_the": true,
+    "drops": {
+      "bad_label": 0,
+      "not_in_text": 0,
+      "empty": 0,
+      "duplicate": 0,
+      "nested": 0
+    }
+  },
+  "llm_parse_failures": 0,
+  "local_score": {
+    "overall": {
+      "precision": 0.9711538461538461,
+      "recall": 0.9351851851851852,
+      "f1": 0.9528301886792453,
+      "tp": 101,
+      "fp": 3,
+      "fn": 7
+    },
+    "per_label": {
+      "PERSON": {
+        "precision": 0.96,
+        "recall": 0.9230769230769231,
+        "f1": 0.9411764705882353,
+        "tp": 24,
+        "fp": 1,
+        "fn": 2
+      },
+      "ORG": {
+        "precision": 1.0,
+        "recall": 0.96,
+        "f1": 0.9795918367346939,
+        "tp": 24,
+        "fp": 0,
+        "fn": 1
+      },
+      "LOCATION": {
+        "precision": 1.0,
+        "recall": 0.9285714285714286,
+        "f1": 0.962962962962963,
+        "tp": 39,
+        "fp": 0,
+        "fn": 3
+      },
+      "EVENT": {
+        "precision": 0.875,
+        "recall": 0.9333333333333333,
+        "f1": 0.9032258064516129,
+        "tp": 14,
+        "fp": 2,
+        "fn": 1
+      }
+    }
+  }
+}

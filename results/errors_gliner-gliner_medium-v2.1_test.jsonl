@@ -1,0 +1,23 @@
+{"id": "t02", "text": "Jordan Ellis met Jordanian officials in Amman to discuss water projects.", "false_positives": [["jordanian officials", "ORG"]], "false_negatives": []}
+{"id": "t05", "text": "Victoria Lim crossed Victoria Harbour by ferry before the Hong Kong Sevens.", "false_positives": [["hong kong sevens", "ORG"]], "false_negatives": [["hong kong sevens", "EVENT"]]}
+{"id": "t07", "text": "ASEAN leaders gathered in Jakarta for the ASEAN Summit.", "false_positives": [], "false_negatives": [["asean summit", "EVENT"]]}
+{"id": "t09", "text": "Ng Kah Hock, a retired teacher from Penang, won the state lottery.", "false_positives": [["state lottery", "EVENT"]], "false_negatives": []}
+{"id": "t11", "text": "He said that they would announce the results later this week.", "false_positives": [["he", "PERSON"], ["they", "ORG"]], "false_negatives": []}
+{"id": "t16", "text": "Diwali celebrations in Little India drew record crowds this year.", "false_positives": [["diwali celebrations", "EVENT"]], "false_negatives": [["diwali", "EVENT"]]}
+{"id": "t18", "text": "Anil Rao and his brother Rajiv run a bakery near Lake Pichola in Udaipur.", "false_positives": [["bakery", "ORG"]], "false_negatives": []}
+{"id": "t19", "text": "Researchers mapped a previously unknown tributary of the Amazon.", "false_positives": [["researchers", "ORG"]], "false_negatives": []}
+{"id": "t20", "text": "The report, published by the Institute of Policy Studies, did not name any individuals.", "false_positives": [["report", "EVENT"]], "false_negatives": []}
+{"id": "t22", "text": "A spokesperson for Bluewave Telecom confirmed the outage affected customers across Johor.", "false_positives": [["a spokesperson", "PERSON"], ["outage", "EVENT"]], "false_negatives": []}
+{"id": "t23", "text": "The Formula 1 Singapore Grand Prix returns to Marina Bay this September.", "false_positives": [["formula 1", "ORG"]], "false_negatives": [["formula 1 singapore grand prix", "EVENT"]]}
+{"id": "t25", "text": "Traffic was heavy on the Causeway as travellers headed to Johor Bahru.", "false_positives": [["travellers", "PERSON"]], "false_negatives": []}
+{"id": "t27", "text": "Chef Mei Ling Zhou will headline the Singapore Food Festival alongside Chef Arturo Gil.", "false_positives": [["chef arturo gil", "PERSON"], ["chef mei ling zhou", "PERSON"], ["singapore", "LOCATION"]], "false_negatives": [["arturo gil", "PERSON"], ["mei ling zhou", "PERSON"], ["singapore food festival", "EVENT"]]}
+{"id": "t29", "text": "Nobody has seen the missing hiker since Sunday, police said.", "false_positives": [["missing hiker", "PERSON"], ["nobody", "PERSON"], ["police", "ORG"], ["sunday", "EVENT"]], "false_negatives": []}
+{"id": "t34", "text": "Oakridge Primary School will host the district science fair on 12 March.", "false_positives": [["district science fair", "EVENT"]], "false_negatives": []}
+{"id": "t38", "text": "The Great Barrier Reef suffered another bleaching event, scientists in Cairns said.", "false_positives": [["bleaching event", "EVENT"], ["great barrier reef", "ORG"], ["scientists", "PERSON"]], "false_negatives": [["great barrier reef", "LOCATION"]]}
+{"id": "t40", "text": "\"Deadline in Dubai\" is a new thriller streaming from next month.", "false_positives": [["dubai", "LOCATION"]], "false_negatives": []}
+{"id": "t41", "text": "Michael Soh, the coach of Sentosa Sharks, praised his goalkeeper after the match.", "false_positives": [["sentosa", "LOCATION"]], "false_negatives": [["sentosa sharks", "ORG"]]}
+{"id": "t44", "text": "The Cannes Film Festival jury, led by Isabelle Moreau, praised the debut.", "false_positives": [["cannes film festival jury", "ORG"], ["debut", "EVENT"]], "false_negatives": [["cannes film festival", "EVENT"]]}
+{"id": "t46", "text": "It was the first time since the Seoul Olympics that the two nations had met.", "false_positives": [["seoul", "LOCATION"], ["two nations", "ORG"]], "false_negatives": [["seoul olympics", "EVENT"]]}
+{"id": "t48", "text": "The ferry from Batam to HarbourFront runs every thirty minutes.", "false_positives": [["ferry", "ORG"]], "false_negatives": []}
+{"id": "t49", "text": "Brother Anselm of St. Andrew's Mission thanked volunteers from across Penang.", "false_positives": [], "false_negatives": [["anselm", "PERSON"], ["st. andrew's mission", "ORG"]]}
+{"id": "t50", "text": "Councillor Grace Tay said the Lakeside Residents' Association would meet on Friday.", "false_positives": [["councillor grace tay", "PERSON"], ["friday", "EVENT"]], "false_negatives": [["grace tay", "PERSON"]]}

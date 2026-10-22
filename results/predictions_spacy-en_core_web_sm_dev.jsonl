@@ -1,0 +1,10 @@
+{"id": "d01", "entities": [{"text": "Priya Nair", "label": "PERSON"}, {"text": "the Bay on", "label": "LOCATION"}, {"text": "the Lantern Festival", "label": "EVENT"}]}
+{"id": "d02", "entities": [{"text": "Harbourline Logistics", "label": "ORG"}, {"text": "Rotterdam", "label": "LOCATION"}, {"text": "Singapore", "label": "LOCATION"}]}
+{"id": "d03", "entities": [{"text": "Marcus Teo", "label": "PERSON"}, {"text": "Chinese New Year", "label": "EVENT"}]}
+{"id": "d04", "entities": [{"text": "the Asia Cup", "label": "EVENT"}, {"text": "Colombo", "label": "LOCATION"}]}
+{"id": "d05", "entities": [{"text": "Wen Li", "label": "PERSON"}, {"text": "the Busan International Film Festival", "label": "LOCATION"}]}
+{"id": "d06", "entities": []}
+{"id": "d07", "entities": [{"text": "Raffles Institution", "label": "ORG"}, {"text": "Hwa Chong Institution", "label": "ORG"}]}
+{"id": "d08", "entities": [{"text": "Kavya Reddy", "label": "PERSON"}, {"text": "Northwind Analytics", "label": "ORG"}, {"text": "Bengaluru", "label": "LOCATION"}, {"text": "Chennai", "label": "LOCATION"}]}
+{"id": "d09", "entities": [{"text": "Mekong", "label": "ORG"}, {"text": "Vientiane", "label": "LOCATION"}]}
+{"id": "d10", "entities": [{"text": "Tan Wei Ming", "label": "PERSON"}, {"text": "Aisha Rahman", "label": "PERSON"}, {"text": "Bluefin Studios", "label": "ORG"}, {"text": "Jurong", "label": "LOCATION"}]}
