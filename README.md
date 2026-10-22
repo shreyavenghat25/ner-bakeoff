@@ -4,18 +4,35 @@ Compares three locally-run NER models on the provided synthetic dataset: quality
 
 | Key | Model | Family | Why it is in the comparison |
 |---|---|---|---|
-| `spacy` | `en_core_web_sm` 3.8.0 | Specialist, fixed labels | Cheapest possible option: tiny, CPU-only, fast. Fixed OntoNotes labels must be mapped to ours. |
-| `gliner` | `urchade/gliner_medium-v2.1` | Specialist, zero-shot | Takes our label names as input, so no label-mapping gap. Still CPU-friendly. |
-| `ollama` | `qwen3:4b` (Q4_K_M) via Ollama | Local LLM | Follows written annotation rules from a prompt. The "can a small LLM do it?" option. |
+| `spacy` | `en_core_web_sm` 3.8.0 (spaCy 3.8.16) | Specialist, fixed labels | Cheapest possible option: tiny, CPU-only, fast. Fixed OntoNotes labels must be mapped to ours. |
+| `gliner` | `urchade/gliner_medium-v2.1`, 195M params, fp32 (gliner 0.2.29, torch 2.14.1) | Specialist, zero-shot | Takes our label names as input, so no label-mapping gap. Still CPU-friendly. |
+| `ollama` | `qwen3:4b`, 4.0B params, Q4_K_M GGUF (Ollama model digest `359d7dd4bcda`) | Local LLM | Follows written annotation rules from a prompt. The "can a small LLM do it?" option. |
 
-> Fill in the exact versions you ran from `results/run_*.json` (it records library versions, model size and quantisation automatically).
+## Results (test set, 50 snippets, 108 gold entities)
+
+F1 values below are from the official `score.py` (micro-averaged, exact match). Each model was run on test exactly once (`results/test_runs.log`).
+
+| Model | P | R | F1 | F1 PERSON | F1 ORG | F1 LOCATION | F1 EVENT | Median latency (s) | p95 latency (s) | Peak memory (MB) | Est. cost / 1k snippets (USD) |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| spaCy `en_core_web_sm` | 0.670 | 0.620 | 0.644 | 0.727 | 0.621 | 0.658 | 0.421 | 0.003 | 0.004 | 308 | 0.0001 |
+| GLiNER medium v2.1 (threshold 0.5) | 0.740 | 0.870 | 0.800 | 0.772 | 0.780 | 0.943 | 0.500 | 0.060 | 0.064 | 1,518 | 0.0030 |
+| Qwen3-4B Q4_K_M (Ollama) | 0.971 | 0.935 | 0.953 | 0.941 | 0.980 | 0.963 | 0.903 | 1.966 | 3.475 | 3,048 | 0.46 |
+
+Cost assumptions (US East on-demand Linux, checked 2026-10-20, see `costs.json` for sources): spaCy on EC2 c7i.large ($0.0892/h), GLiNER on c7i.xlarge ($0.1785/h), Qwen3-4B on g6.xlarge with one NVIDIA L4 ($0.8048/h). Cost uses the mean latency measured on the laptop, one snippet at a time. For the LLM this applies M2 latency to an L4 price, so it is a rough, probably pessimistic, cross-hardware estimate. It leaves out idle time, batching and concurrency, engineering and maintenance effort, storage and data transfer.
+
+Full table with assumptions: `results/results_test.md` / `.csv`. Discussion and recommendation: `NOTE.md`.
+
+## Hardware
+
+MacBook Air, Apple M2 (8 cores), 8 GB unified memory, macOS 14 (Darwin 23.4.0), Python 3.11.17 (conda). spaCy and GLiNER ran on CPU. Ollama ran Qwen3-4B on the M2's integrated GPU via Metal (the `GPU: none detected` line in `results_test.md` only checks for NVIDIA GPUs).
 
 ## Setup
 
-Tested with Python 3.11. Use a virtual environment.
+Tested with Python 3.11.17. Use a virtual environment (results here were produced in a conda environment).
 
 ```bash
-python -m venv .venv && source .venv/bin/activate        # Windows: .venv\Scripts\activate
+conda create -n ner python=3.11 -y && conda activate ner
+# or: python3.11 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
@@ -55,7 +72,7 @@ python run.py --model spacy  --split dev --keep-leading-the    # check the "the"
 
 ```bash
 python run.py --model spacy  --split test
-python run.py --model gliner --split test --gliner-threshold <chosen on dev>
+python run.py --model gliner --split test --gliner-threshold 0.5
 python run.py --model ollama --split test --llm-model qwen3:4b
 ```
 
@@ -101,18 +118,19 @@ python summarize.py --split test      # writes results/results_test.md and .csv
 
 **Cost per 1,000 snippets** = hourly price × (1,000 × mean seconds per snippet) / 3,600. Mean is used, not median, because cost follows total time.
 
-## Assumptions (edit to reflect your own decisions)
+## Assumptions and dev-set decisions
 
-- Leading "the" is stripped, based on the brief's example ("Gardens by the Bay"). This is wrong for names that genuinely start with "The". Its effect was checked on dev: _fill in_.
+- Leading "the" is stripped, based on the brief's example ("Gardens by the Bay"). This is wrong for names that genuinely start with "The". Checked on dev with spaCy: F1 0.875 with stripping vs 0.792 without (a difference of two entities on a 24-entity dev set), so stripping was kept for all models.
 - spaCy label mapping: GPE, LOC, FAC → LOCATION. NORP (demonyms), WORK_OF_ART, DATE and others are dropped because the brief says not to tag them.
-- GLiNER label prompts: `person`, `organization`, `location`, `named event`. Threshold chosen on dev: _fill in_.
+- GLiNER label prompts: `person`, `organization`, `location`, `named event`. Threshold: 0.5 (the library default). On dev, 0.5 and 0.6 tied (F1 0.885) and 0.4 scored 0.868, a one-entity difference, which is noise on 10 snippets, so the default was kept.
 
 ## Reproducibility notes
 
 - `requirements.txt` pins library versions. The run JSON records the exact versions used.
 - The LLM uses temperature 0 and seed 42. Ollama can still vary slightly across versions and hardware.
-- Hardware used: _fill in from `run_*.json`_.
+- Hardware: see the Hardware section above. `run_*.json` records it per run.
+- Latency excludes model load and 3 warm-up snippets from dev. Memory for Ollama combines client RSS with the loaded-model size reported by Ollama (3,028 MB for Qwen3-4B, weights + 4,096-token KV cache).
 
 ## AI-assistant disclosure
 
-_Fill in one honest sentence, e.g. which parts of the code were drafted with an AI assistant, and confirm that the experiments, results and note are your own._
+The evaluation harness code (model adapters, post-processing, timing and memory measurement, results summary), the cloud price lookup and this README were drafted with an AI assistant (Claude). I set up and ran all experiments on my own laptop, made the dev-set decisions, reviewed the code, and wrote the analysis in `NOTE.md`.
