@@ -20,7 +20,7 @@ F1 values below are from the official `score.py` (micro-averaged, exact match). 
 
 Cost assumptions (US East on-demand Linux, checked 2026-10-20, see `costs.json` for sources): spaCy on EC2 c7i.large ($0.0892/h), GLiNER on c7i.xlarge ($0.1785/h), Qwen3-4B on g6.xlarge with one NVIDIA L4 ($0.8048/h). Cost uses the mean latency measured on the laptop, one snippet at a time. For the LLM this applies M2 latency to an L4 price, so it is a rough, probably pessimistic, cross-hardware estimate. It leaves out idle time, batching and concurrency, engineering and maintenance effort, storage and data transfer.
 
-Full table with assumptions: `results/results_test.md` / `.csv`. Discussion and recommendation: `NOTE.md`.
+Full table with assumptions: `results/results_test.md` / `.csv`.
 
 ## Hardware
 
@@ -133,4 +133,4 @@ python summarize.py --split test      # writes results/results_test.md and .csv
 
 ## AI-assistant disclosure
 
-The evaluation harness code (model adapters, post-processing, timing and memory measurement, results summary), the cloud price lookup and this README were drafted with an AI assistant (Claude). I set up and ran all experiments on my own laptop, made the dev-set decisions, reviewed the code, and wrote the analysis in `NOTE.md`.
+The evaluation harness code (model adapters, post-processing, timing and memory measurement, results summary), the cloud price lookup and this README were drafted with an AI assistant (Claude). I set up and ran all experiments on my own laptop and reviewed the code and results.
