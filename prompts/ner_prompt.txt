@@ -1,0 +1,29 @@
+You are a named entity recognition system. Extract named entities from the snippet.
+
+Labels:
+- PERSON: names of individual people. Exclude titles and honorifics ("Minister", "Dr", "Coach").
+- ORG: companies, agencies, institutions, schools, clubs, teams, media outlets.
+- LOCATION: countries, cities, districts, rivers, mountains, landmarks, venues, buildings.
+- EVENT: named events only (festivals, tournaments, summits, holidays, storms). Not generic ones like "the match".
+
+Rules:
+- Tag the longest name only. Do not also tag a place or person inside a longer name.
+- Do not tag nationalities or demonyms (e.g. "Kenyan") unless they are part of an organisation name.
+- Do not tag titles of films, books or songs, even if they contain a name.
+- Do not tag dates, numbers or job titles.
+- List each entity once, even if it is mentioned several times.
+- Copy the entity text exactly as it appears in the snippet, without a possessive "'s".
+- If there are no entities, return an empty list.
+
+Example
+Snippet: Dr Hannah Okafor of Lakeside Polytechnic spoke at the Nordic Water Summit in Oslo, where the Kenyan delegation screened the film "Rain over Mombasa".
+Output: {"entities": [{"text": "Hannah Okafor", "label": "PERSON"}, {"text": "Lakeside Polytechnic", "label": "ORG"}, {"text": "Nordic Water Summit", "label": "EVENT"}, {"text": "Oslo", "label": "LOCATION"}]}
+
+Example
+Snippet: The committee met on Tuesday and approved three new projects.
+Output: {"entities": []}
+
+Return only JSON in the format {"entities": [{"text": "...", "label": "..."}]}.
+
+Snippet: {text}
+Output:

@@ -1,0 +1,6 @@
+{
+  "_notes": "US East (N. Virginia) on-demand Linux prices, checked 2026-10-20 via the DoiT instance-pricing pages below (a third-party mirror of AWS list prices). Confirm against the official AWS EC2 pricing page before submitting. Instance choice: the smallest instance that comfortably fits each model in memory. Cost assumes the instance processes snippets one at a time at the latency measured on the local laptop, which is an approximation (see README).",
+  "spacy":  {"instance": "EC2 c7i.large (2 vCPU, 4 GiB): spaCy sm needs well under 1 GB",  "usd_per_hour": 0.0892, "source": "https://www.doit.com/compute/spot/us-east-1/c7i.large",  "checked_on": "2026-10-20"},
+  "gliner": {"instance": "EC2 c7i.xlarge (4 vCPU, 8 GiB): CPU inference for a ~200M-parameter model", "usd_per_hour": 0.1785, "source": "https://www.doit.com/compute/spot/us-east-1/c7i.xlarge", "checked_on": "2026-10-20"},
+  "ollama": {"instance": "EC2 g6.xlarge (4 vCPU, 16 GiB, 1x NVIDIA L4 24 GB): smallest current NVIDIA GPU instance; a 4B Q4 model fits easily", "usd_per_hour": 0.8048, "source": "https://www.doit.com/compute/spot/us-east-1/g6.xlarge", "checked_on": "2026-10-20"}
+}

@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pyc
+results/raw_*.jsonl
+results_sample/
+.DS_Store

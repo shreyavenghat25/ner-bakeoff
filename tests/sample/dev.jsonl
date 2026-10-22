@@ -1,0 +1,3 @@
+{"id": "sd1", "text": "Arjun Mehta flew from Chennai to attend the Dubai Air Show with engineers from Kestrel Aerospace.", "entities": [{"text": "Arjun Mehta", "label": "PERSON"}, {"text": "Chennai", "label": "LOCATION"}, {"text": "Dubai Air Show", "label": "EVENT"}, {"text": "Kestrel Aerospace", "label": "ORG"}]}
+{"id": "sd2", "text": "The board met on Monday to review the budget.", "entities": []}
+{"id": "sd3", "text": "Coach Lena Brandt said the Harbour City Rovers would train at Marina Bay Stadium before the Pacific Cup.", "entities": [{"text": "Lena Brandt", "label": "PERSON"}, {"text": "Harbour City Rovers", "label": "ORG"}, {"text": "Marina Bay Stadium", "label": "LOCATION"}, {"text": "Pacific Cup", "label": "EVENT"}]}
